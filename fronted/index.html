@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent - Dynamic Function Calling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Agent Platform</h1>
+            <p>Intelligent function calling with GPT</p>
+            <div class="tools-badge">
+                <span class="tool-tag">🌤️ Weather</span>
+                <span class="tool-tag">📧 Email</span>
+                <span class="tool-tag">🗄️ Database</span>
+            </div>
+        </header>
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message system">
+                    🤖 Ready! Try: <strong>"Weather in Paris"</strong> or <strong>"Find Alice in database"</strong>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <textarea id="userInput" placeholder="Type your request..." rows="3"></textarea>
+                <button id="sendBtn" onclick="sendMessage()">🚀 Send</button>
+            </div>
+            <div class="debug-toggle">
+                <button onclick="toggleDebug()" class="debug-btn">🔍 Show AI Decision Flow</button>
+            </div>
+            <div class="debug-panel" id="debugPanel" style="display: none;">
+                <h3>🧠 Agent Reasoning Steps</h3>
+                <div id="debugSteps"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
